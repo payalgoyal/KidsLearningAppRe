@@ -1,12 +1,16 @@
 function registerEnteredKey(key){
 	for (var l = 0;l<optionKeys.length;l++){
 		var ansSpan = document.getElementById("blank"+l);
-		if (key.innerHTML == optionKeys[l] && (ansSpan.innerHTML == "_ ")){
+		if(ansSpan.innerHTML == "_ "){
+			checkPos = l;
+			break;
+		}
+	}
+		if (key.innerHTML == optionKeys[checkPos]){
 			var bSpan = document.getElementById("blank"+l);
 			bSpan.innerHTML = key.innerHTML+" ";
 			blankCount--;
 		}
-	}
 	if (blankCount == 0){
 		var keysEle = document.getElementsByClassName("keys");
 		for(var keyEle=0;keyEle<keysEle.length;keyEle++){
