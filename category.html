@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<title>My Learning App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="script.js"></script> 
+	<script src="jquery-1.11.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+	
+	<!-- <script type="text/javascript" src="phonegap.js"></script> -->
+</head>
+	<!-- <audio id="switchFlick" src="/android_asset/www/assets/switchFlick.ogg"></audio> -->
+	<!-- <audio id="switchFlick" src="assets/switchFlick.ogg"></audio> -->
+
+<body>
+	<div id="wrapper">
+		<div id="header">FUN ZONE</div>
+		<!-- <img id="indexBg" src="images/alpha_bg.jpg" /> -->
+		<!-- <div id= "content" style="display:table">
+			<div id="categoryButtons"  style="display:table-cell;vertical-align:middle;padding-left:10%"> -->
+			<div class='headerContent' style=''>	
+    <div class="slideshow-container" style='width:100%'>
+
+				<!-- <button class="catButtons" type="button" value="1" onclick="categoryChange(this)" > Recognise Alphabets </button> -->
+				<button class="catButtons" type="button" value="1" onclick="categoryChange(this)">
+					<img class="catImage" src="images/matchTitle.png" />
+					<p class="catText" >Match </p>
+				</button>
+				<button class="catButtons" type="button" value="2" onclick="categoryChange(this)"> 
+					<img class="catImage" src="images/guessTitle.jpg" />
+					<p class="catText">Guess It</p>
+				</button>
+				<button class="catButtons" type="button" value="3" onclick="categoryChange(this)" >
+					<img class="catImage" src="images/colorTitle.jpg" />
+					<p class="catText">Recognise Color </p>
+				</button>
+				<button class="catButtons" type="button" value="4" onclick="categoryChange(this)" >
+					<img class="catImage" src="images/countingTitle.jpg" />
+					<p class="catText">Counting</p>
+				</button>
+				<button class="catButtons" type="button" value="5" onclick="categoryChange(this)" >
+					<img class="catImage" src="images/animalsTitle.jpg" />
+					<p class="catText">Identify Animal</p>
+				</button>
+				<button class="catButtons" type="button" value="6" onclick="categoryChange(this)" >
+					<img class="catImage" src="images/numberSpellTitle.png" />
+					<p class="catText">Spell Number</p>
+				</button>
+				<button class="catButtons" type="button" value="7" onclick="categoryChange(this)" >
+					<img class="catImage" src="images/functionalMatchTitle.jpg" />
+					<p class="catText">Functionality Match</p>
+				</button>
+				<button class="catButtons" type="button" value="8" onclick="categoryChange(this)" >
+					<img class="catImage" src="images/colorTitle.jpg" />
+					<p class="catText">Color Matching Activity</p>
+				</button>
+				<button class="catButtons" type="button" value="9" onclick="categoryChange(this)" >
+					<img class="catImage" src="images/countingTitle.jpg" />
+					<p class="catText">Number Matching Activity</p>
+				</button>
+				<!-- <button class="catButtons" type="button" value="6" onclick="categoryChange(this)" > brands </button>
+				<button class="catButtons" type="button" value="7" onclick="categoryChange(this)" > inventions </button> -->
+			</div>
+		</div>
+	</div>
+	
+	<script>
+	var headEle = document.getElementById("header");
+	var wrapEle = document.getElementById("wrapper");
+	var wrapWidth = wrapEle.offsetWidth;
+	var lettWidth = 0.08 * wrapWidth;
+	headEle.setAttribute("style","letter-spacing:"+lettWidth+"px");
+	 function categoryChange(sel){
+		<!-- playAudio("switchFlick"); -->
+		var catSelected = sel.value;
+		window.document.location.href = "game.html?category=" + catSelected;
+	 }
+	</script>
+	
+</body>
+</html>

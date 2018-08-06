@@ -1,0 +1,48 @@
+
+<html>
+<head>
+	<title>My Learning App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="script1.js"></script>
+	<script src="jquery-1.11.2.min.js"></script>
+	<!-- <script type="text/javascript" src="phonegap.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div id="canvasContainer">
+		<canvas id="canvas" width="400" height="500" style="border:solid black 1px; position:absolute">
+		  Your browser does not support canvas element.
+		</canvas>
+		<div id="columns" style="border:solid black 1px;width:400px;height:500px">
+			<div id="rightColumn" style="border:solid black 1px;float:right;width:150px;height:500px;display:inline-block;" >
+				<div id="answerImage" style="text-align:center">
+					<!-- <p style="font-size:50; width:250px;height:60">Ball</p>
+					<p style="font-size:50; width:250px;height:60">Doll</p>
+					<p style="font-size:50; width:250px;height:60">Apple</p>
+					<p style="font-size:50; width:250px;height:60">Elephant</p>
+					<p style="font-size:50; width:250px;height:60">Cat</p> -->
+				</div>
+			</div>
+			<div id="leftColumn" style="border:solid black 1px;float:left;width:50px;height:500px;display:inline-block;" >
+				<div id="questionAlpha" style="text-align:center">
+					<!-- <p style="font-size:50; width:50px;height:60">A</p>
+					<p style="font-size:50; width:50px;height:60">B</p>
+					<p style="font-size:50; width:50px;height:60">C</p>
+					<p style="font-size:50; width:50px;height:60">D</p>
+					<p style="font-size:50; width:50px;height:60">E</p> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<!-- <button onclick="startup()" style="position:absolute">Initialize</button> -->
+	<br>
+	<!-- Log: <pre id="log" style="border: 1px solid #ccc;"></pre> -->
+	<script>
+		var queryString = new Array();
+		var query = window.location.search.split('?')[1];
+		var cat = query.split('=')[1];
+		matchTheColumn(cat);
+	</script>
+</body>
+</html>

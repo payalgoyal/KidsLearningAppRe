@@ -1,0 +1,547 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+	font-family: 'Lato', verdana, sans-serif;
+}
+img, embed, object, video {
+	max-width:100%;
+    height:auto;
+}
+#wrapper {
+	min-height:100%;
+	height: auto;
+	position:relative;
+	background-color: rgba(255, 246, 141, 0.5);
+}
+#header {
+	display: block;
+	width: 100%;
+	background-image: url(images/header_bg_repeat.png);
+	background-size: contain;
+	font-size: 1.8em;
+	vertical-align: middle;
+	font-family: myFirstFont,sans-serif;
+	font-weight: 700;
+	color: aliceblue;
+	text-align: center;
+	/* letter-spacing: 8vw; */
+	height: 9%;
+	padding-top: 1%;
+	/* background-color: #6622CC; */
+	/* background-color: #8C7AA9; */
+	/* background-color: #A06CD5; */
+	/* height: 10%; */
+}
+#content{
+	position: relative;
+	background-image: url("images/alpha_bg_fullscreen.png");
+	background-size: contain;
+	height: 90%;
+	width: 100%;
+}
+#game_area {
+	display: block;
+	width: 90%;
+	margin-left:5%;
+	font-weight: 300;
+    font-size: 1.2em;
+	text-align: center;
+	height: 51%;
+}
+
+#currStreak {
+	float: right;
+	margin-bottom: 3%;
+	width: 140px;
+	text-align: right;
+}
+
+#bestStreak {
+	float:right;
+	width: 140px;
+	text-align: right;
+}
+#queryZone{
+	height: 73%;
+	display: table;
+	clear: both;
+	width: 100%;
+}
+#queryArea{
+	display: table-cell;
+	vertical-align: middle;
+	/* padding-left:5%;
+	padding-right:5%; */
+}
+#queryZoneDup{
+	height: 75%;
+	display: table;
+	clear: both;
+	width: 100%;
+}
+#queryAreaDup{
+}
+.queryWord{
+	display: inline-block;
+}
+/* #queryWord1{
+	display: inline-block;
+} */
+.queryWordDup{
+	display: inline-block;
+}
+.query {
+	display: inline-block;
+	font-weight: 300;
+    font-size: 1.6em;
+    letter-spacing: 6px;
+	font-family: monospace;
+	/* height: 75%; */
+}
+.queryDup{
+	display: inline-block;
+	font-weight: 300;
+    font-size: 1.6em;
+    letter-spacing: 6px;
+	font-family: monospace;
+	/* height: 75%; */
+}
+.streak {
+	font-family: courier, 'Lato', verdana, sans-serif;
+	font-weight: 300;
+    font-size: 0.8em;
+	clear: both;
+    position: relative;
+    display: block;
+	margin-right: 0;
+	padding-right: 2%;
+	/* width: 200px; */
+	/* clear: left;
+	float: right; */
+
+ }
+
+#wrong_ans {
+	position: relative;
+	clear: both;
+	text-decoration: line-through;
+	text-align: center;
+	padding-top: 3%;
+	font-weight: 200;
+	font-size: 1em;
+	width: 100%;
+	color: #ffffff;
+}
+.wrong_choices{
+	text-decoration: line-through;
+	display: inline-block;
+}
+#play_again {
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
+	height:1.5%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	padding-left: 4%;
+	padding-right: 4%;
+	/* border: rounded; */
+	/* background: #700000; */
+    border: 0;
+	background-color: #993955;
+	font-size: 1.4em;
+    font-family: myFirstFont,sans-serif;
+	border-radius: 6px;
+	color: #ffffff;
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.75);
+}
+#play_again button {
+	padding: 8px 20px 8px 20px;
+	margin-bottom: 15px;
+	border: 1px solid #a1a1a1;
+    border-radius: 3px;
+    font-size: 0.7em;
+	color: #ffffff;
+	background-color: #281a16;
+	cursor: pointer; cursor: hand; 
+}
+
+#choice{
+	clear: both;
+	padding-top: 10%;
+	margin-left: 30%;
+	text-align: center;
+}
+#play_area{
+	/* position: relative; */
+	clear: both;
+	/* min-height:35%; */
+	/* max-height: 50%; */
+	height: 64%;
+	width: 110%;
+	/* background-color: #7192BE; */
+	/* background-color: rgba(156, 85, 165, 0.5); */
+	margin-left: -5%;
+	margin-right: 20%;
+	/* border-radius: 25px; */
+	/* text-align: center; */
+	/* margin-top: 3%; */
+	/* margin-bottom: 5%; */
+	/* padding-top: 20%; */
+}
+#cartoon img {
+	position: absolute;
+	padding-bottom: 3%;
+	margin-left: -5%;
+	/* margin-top: 15%; */
+	/* float: left; */
+	/* padding-left: 5%; */
+	/* margin-top: -10%; */
+}
+
+#footer {
+	position: absolute;
+	display: block;
+	max-height:65%;
+	bottom:0;
+	width:100%;
+	clear: both;
+	/* margin-top: 5%;	 */
+}
+
+.keys{
+	padding: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	color: white;
+	/* background-color: #2F4F4F; */
+	/* background-color: #A755C2; */
+	/* background-color: #52154E; */
+	/* background-color: #EDA2F2; */
+	background-color: #102B3F;
+	font-size: 1.4em;
+	font-family: myFirstFont;
+	/* margin: 5px */
+}
+.chancesLeft {
+	position: relative;
+    opacity: 0.25;
+    font-size: 1em;
+    z-index: 1000;
+	float: left;
+	margin-top: 10%;
+	width: 40%;
+}
+#chanceDiagram{
+	height: 33%;
+	margin-top: 4%;
+	/* clear: both; */
+	/* margin-left: 35%; */
+}
+#cartoon{
+	height: 100%;
+}
+#indexBg{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.15;
+}
+/* #indexBg img{
+	position: absolute;
+    opacity: 0.25;
+    font-size: 1em;
+    z-index: 1;
+	float: left;
+	width: 100%;
+	height: auto;
+	top: 0;
+	left: 0;
+	/* margin-top: -40%; */
+/*} */
+#categoryButtons{
+	/* background-image: url("images/alpha_bg.jpg"); */
+	/* position: relative;
+	margin-top: -10%;
+	margin-left: 45%;
+	z-index: 2; */
+}
+.categoryClass{
+	width: 50%;
+}
+.catImage{
+	width:100%;
+	height: 70%;
+}
+.catButtons{
+	border: none;
+	background: none;
+	margin-left: auto;
+	margin-right: auto;
+	width: 150px;
+	height: 150px;
+}
+.catText{
+	/* display: block; */
+	/* margin: 5%; */
+	padding: 1%;
+	font-weight: 300;
+    font-size: 2em;
+	font-family: myFirstFont;
+}
+@font-face {
+   font-family: myFirstFont;
+   src: url(font/AmaticSC-Bold.ttf);
+}
+
+.bounce { 
+	-webkit-animation-name: bounce; 
+	animation-name: bounce;
+animation-duration: 2s;	
+}
+
+@keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+   40% {transform: translateY(-30px);} 
+   60% {transform: translateY(-15px);} 
+} 
+
+#correctState{
+	/* background-color: #000000; */
+	/* opacity: 0.35; */
+	/* width: 70%; */
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	/* color: white; */
+	/* height: 300px; */
+}
+
+.correctStateDiv.verMove{
+	margin: 20px;
+}
+
+.shake0{
+	/* display:inline-block; */ transform-origin:center center;
+	-webkit-transform:translate(0%, 0%) rotate(0deg);
+	/* font-weight: 300;
+    font-size: 1.6em; */
+	/* font-weight: 300;
+    font-size: 1.6em;
+    letter-spacing: 6px;
+	font-family: monospace; */
+	/* width: 7.8%; */
+}
+.shake1{
+	/* display:inline-block;  */transform-origin:center center;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-transform:translate(0%, -5%) rotate(.5deg);
+	/* font-weight: 300;
+    font-size: 1.6em; */
+	/* font-weight: 300;
+    font-size: 1.6em;
+    letter-spacing: 6px;
+	font-family: monospace; */
+	/* width: 7.8%; */
+}
+.shake2{
+	 /* display:inline-block;  */transform-origin:center center;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-transform:translate(0%, -5%) rotate(-.5deg);
+	/* font-weight: 300;
+    font-size: 1.6em; */
+	/* font-weight: 300;
+    font-size: 1.6em;
+    letter-spacing: 6px;
+	font-family: monospace; */
+	/* width: 7.8%; */
+}
+.shake3{
+	 /* display:inline-block;  */transform-origin:center center;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-transform:translate(0%, 5%) rotate(-.5deg);
+	/* font-weight: 300;
+    font-size: 1.6em; */
+	/* font-weight: 300;
+    font-size: 1.6em;
+    letter-spacing: 6px;
+	font-family: monospace; */
+	/* width: 7.8%; */
+}
+.shake4{
+	 /* display:inline-block; */ transform-origin:center center;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-transform:translate(0%, 5%) rotate(.5deg);
+	/* font-weight: 300;
+    font-size: 1.6em; */
+	/* font-weight: 300;
+    font-size: 1.8em;
+    letter-spacing: 6px;
+	font-family: monospace; */
+	/* width: 7.8%; */
+}
+.shake{
+	/* -webkit-animation-name:shake;-webkit-animation-duration:100ms; */
+	/* -webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite; */
+	/* animation-name:shake;animation-duration:100ms; */
+	/* animation-timing-function:ease-in-out; *//* animation-iteration-count:infinite; */
+	display:inline-block;transform-origin:center center;
+	transform:translate(10%, -10%) rotate(-5deg)
+}
+
+.shake-slow0{
+	display:inline-block;transform-origin:center center;
+	animation-timing-function:ease-in-out;
+	-webkit-transform:translate(0%, 0%) rotate(0deg)
+}
+.shake-slow1{
+	display:inline-block;transform-origin:center center;
+	animation-timing-function:ease-in-out;
+	-webkit-transform:translate(7%, -7%) rotate(-3.5deg)
+}
+.shake-slow2{
+	display:inline-block;transform-origin:center center;
+	animation-timing-function:ease-in-out;
+	-webkit-transform:translate(7%, -7%) rotate(3.5deg)
+}
+.shake-slow3{
+	display:inline-block;transform-origin:center center;
+	animation-timing-function:ease-in-out;
+	-webkit-transform:translate(-7%, -7%) rotate(3.5deg)
+}
+.shake-slow4{
+	display:inline-block;transform-origin:center center;
+	animation-timing-function:ease-in-out;
+	-webkit-transform:translate(-7%, 7%) rotate(-3.5deg)
+}
+
+/* {2%{transform:translate(5px, -8px) rotate(.5deg)}
+4%{transform:translate(-9px, 8px) rotate(3.5deg)}
+6%{transform:translate(10px, -7px) rotate(2.5deg)}
+8%{transform:translate(3px, 10px) rotate(-2.5deg)}
+10%{transform:translate(-8px, -9px) rotate(3.5deg)}
+12%{transform:translate(-7px, 3px) rotate(2.5deg)}
+14%{transform:translate(-6px, 5px) rotate(.5deg)}
+16%{transform:translate(-6px, -5px) rotate(1.5deg)}
+18%{transform:translate(3px, 1px) rotate(-.5deg)}
+20%{transform:translate(5px, 6px) rotate(2.5deg)}
+22%{transform:translate(9px, 0px) rotate(-2.5deg)}
+24%{transform:translate(-6px, 4px) rotate(-1.5deg)}
+26%{transform:translate(-9px, 9px) rotate(-.5deg)}
+28%{transform:translate(3px, 8px) rotate(1.5deg)}
+30%{transform:translate(-7px, 4px) rotate(-1.5deg)}
+32%{transform:translate(-4px, -9px) rotate(-2.5deg)}
+34%{transform:translate(10px, 8px) rotate(-2.5deg)}
+36%{transform:translate(6px, 0px) rotate(1.5deg)}
+38%{transform:translate(-6px, 2px) rotate(2.5deg)}
+40%{transform:translate(-4px, 10px) rotate(-2.5deg)}
+42%{transform:translate(2px, 7px) rotate(-.5deg)}
+44%{transform:translate(-2px, 2px) rotate(.5deg)}
+46%{transform:translate(0px, 1px) rotate(3.5deg)}
+48%{transform:translate(7px, -6px) rotate(-1.5deg)}
+50%{transform:translate(-3px, 3px) rotate(-1.5deg)}
+52%{transform:translate(6px, -6px) rotate(2.5deg)}
+54%{transform:translate(10px, 4px) rotate(2.5deg)}
+56%{transform:translate(-6px, 4px) rotate(-1.5deg)}
+58%{transform:translate(3px, 3px) rotate(-1.5deg)}
+60%{transform:translate(-9px, -9px) rotate(-2.5deg)}62%{transform:translate(-2px, -3px) rotate(-.5deg)}64%{transform:translate(-2px, 8px) rotate(-.5deg)}66%{transform:translate(1px, 3px) rotate(.5deg)}68%{transform:translate(2px, 2px) rotate(2.5deg)}70%{transform:translate(10px, -8px) rotate(2.5deg)}72%{transform:translate(-8px, 5px) rotate(3.5deg)}74%{transform:translate(0px, -3px) rotate(-2.5deg)}76%{transform:translate(-4px, -7px) rotate(-2.5deg)}78%{transform:translate(3px, 4px) rotate(-1.5deg)}80%{transform:translate(-4px, 0px) rotate(-2.5deg)}82%{transform:translate(4px, 2px) rotate(2.5deg)}84%{transform:translate(-2px, -5px) rotate(-2.5deg)}86%{transform:translate(0px, 0px) rotate(2.5deg)}88%{transform:translate(-7px, 9px) rotate(-.5deg)}90%{transform:translate(-7px, 8px) rotate(.5deg)}92%{transform:translate(-7px, -1px) rotate(-.5deg)}94%{transform:translate(8px, 8px) rotate(-1.5deg)}
+96%{transform:translate(4px, -7px) rotate(.5deg)}
+98%{transform:translate(2px, 7px) rotate(-2.5deg)}
+0%,100%{transform:translate(0, 0) rotate(0)}}
+ */
+/* .shake{
+	display:inline-block;transform-origin:center center
+} */
+
+@-webkit-keyframes shake{
+	2%{transform:translate(-1.5px, .5px) rotate(.5deg)}
+	4%{transform:translate(.5px, -1.5px) rotate(.5deg)}
+	6%{transform:translate(-.5px, .5px) rotate(1.5deg)}
+	8%{transform:translate(-.5px, -1.5px) rotate(1.5deg)}
+	10%{transform:translate(-.5px, 1.5px) rotate(.5deg)}
+	12%{transform:translate(2.5px, -1.5px) rotate(-.5deg)}
+	14%{transform:translate(1.5px, .5px) rotate(-.5deg)}
+	16%{transform:translate(1.5px, -1.5px) rotate(.5deg)}
+	18%{transform:translate(2.5px, -.5px) rotate(.5deg)}
+	20%{transform:translate(-.5px, 1.5px) rotate(.5deg)}
+	22%{transform:translate(-.5px, -.5px) rotate(.5deg)}
+	24%{transform:translate(2.5px, -1.5px) rotate(1.5deg)}
+	26%{transform:translate(-.5px, 2.5px) rotate(-.5deg)}
+	28%{transform:translate(2.5px, -1.5px) rotate(.5deg)}
+	30%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}
+	32%{transform:translate(.5px, 1.5px) rotate(-.5deg)}
+	34%{transform:translate(2.5px, .5px) rotate(.5deg)}
+	36%{transform:translate(1.5px, -1.5px) rotate(.5deg)}
+	38%{transform:translate(2.5px, 2.5px) rotate(.5deg)}
+	40%{transform:translate(-.5px, -.5px) rotate(.5deg)}
+	42%{transform:translate(2.5px, -1.5px) rotate(.5deg)}
+	44%{transform:translate(1.5px, -.5px) rotate(1.5deg)}
+	46%{transform:translate(.5px, 2.5px) rotate(.5deg)}
+	48%{transform:translate(.5px, 1.5px) rotate(-.5deg)}
+	50%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}
+	52%{transform:translate(.5px, 1.5px) rotate(-.5deg)}
+	54%{transform:translate(-.5px, .5px) rotate(-.5deg)}
+	56%{transform:translate(1.5px, -.5px) rotate(.5deg)}
+	58%{transform:translate(.5px, 2.5px) rotate(1.5deg)}
+	60%{transform:translate(-.5px, 1.5px) rotate(-.5deg)}
+	62%{transform:translate(2.5px, .5px) rotate(1.5deg)}
+	64%{transform:translate(-.5px, 2.5px) rotate(.5deg)}
+	66%{transform:translate(.5px, -.5px) rotate(-.5deg)}
+	68%{transform:translate(.5px, -.5px) rotate(-.5deg)}
+	70%{transform:translate(-1.5px, 2.5px) rotate(1.5deg)}
+	72%{transform:translate(-.5px, 1.5px) rotate(1.5deg)}
+	74%{transform:translate(-.5px, 2.5px) rotate(1.5deg)}
+	76%{transform:translate(2.5px, .5px) rotate(-.5deg)}
+	78%{transform:translate(2.5px, 1.5px) rotate(1.5deg)}
+	80%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}
+	82%{transform:translate(2.5px, -1.5px) rotate(1.5deg)}
+	84%{transform:translate(-1.5px, .5px) rotate(-.5deg)}
+	86%{transform:translate(2.5px, -1.5px) rotate(.5deg)}
+	88%{transform:translate(1.5px, -.5px) rotate(.5deg)}
+	90%{transform:translate(2.5px, 1.5px) rotate(.5deg)}
+	92%{transform:translate(-.5px, -1.5px) rotate(-.5deg)}
+	94%{transform:translate(-1.5px, 1.5px) rotate(.5deg)}
+	96%{transform:translate(2.5px, 2.5px) rotate(1.5deg)}
+	98%{transform:translate(1.5px, -1.5px) rotate(-.5deg)}
+	0%,100%{transform:translate(0, 0) rotate(0)}}
+
+
+/* @-webkit-keyframes shake{
+	2%{transform:translate(-1.5px, .5px) rotate(.5deg)}4%{transform:translate(.5px, -1.5px) rotate(.5deg)}6%{transform:translate(-.5px, .5px) rotate(1.5deg)}8%{transform:translate(-.5px, -1.5px) rotate(1.5deg)}10%{transform:translate(-.5px, 1.5px) rotate(.5deg)}12%{transform:translate(2.5px, -1.5px) rotate(-.5deg)}14%{transform:translate(1.5px, .5px) rotate(-.5deg)}16%{transform:translate(1.5px, -1.5px) rotate(.5deg)}18%{transform:translate(2.5px, -.5px) rotate(.5deg)}20%{transform:translate(-.5px, 1.5px) rotate(.5deg)}22%{transform:translate(-.5px, -.5px) rotate(.5deg)}24%{transform:translate(2.5px, -1.5px) rotate(1.5deg)}26%{transform:translate(-.5px, 2.5px) rotate(-.5deg)}28%{transform:translate(2.5px, -1.5px) rotate(.5deg)}30%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}32%{transform:translate(.5px, 1.5px) rotate(-.5deg)}34%{transform:translate(2.5px, .5px) rotate(.5deg)}36%{transform:translate(1.5px, -1.5px) rotate(.5deg)}38%{transform:translate(2.5px, 2.5px) rotate(.5deg)}40%{transform:translate(-.5px, -.5px) rotate(.5deg)}42%{transform:translate(2.5px, -1.5px) rotate(.5deg)}44%{transform:translate(1.5px, -.5px) rotate(1.5deg)}46%{transform:translate(.5px, 2.5px) rotate(.5deg)}48%{transform:translate(.5px, 1.5px) rotate(-.5deg)}50%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}52%{transform:translate(.5px, 1.5px) rotate(-.5deg)}54%{transform:translate(-.5px, .5px) rotate(-.5deg)}56%{transform:translate(1.5px, -.5px) rotate(.5deg)}58%{transform:translate(.5px, 2.5px) rotate(1.5deg)}60%{transform:translate(-.5px, 1.5px) rotate(-.5deg)}62%{transform:translate(2.5px, .5px) rotate(1.5deg)}64%{transform:translate(-.5px, 2.5px) rotate(.5deg)}66%{transform:translate(.5px, -.5px) rotate(-.5deg)}68%{transform:translate(.5px, -.5px) rotate(-.5deg)}70%{transform:translate(-1.5px, 2.5px) rotate(1.5deg)}72%{transform:translate(-.5px, 1.5px) rotate(1.5deg)}74%{transform:translate(-.5px, 2.5px) rotate(1.5deg)}76%{transform:translate(2.5px, .5px) rotate(-.5deg)}78%{transform:translate(2.5px, 1.5px) rotate(1.5deg)}80%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}82%{transform:translate(2.5px, -1.5px) rotate(1.5deg)}84%{transform:translate(-1.5px, .5px) rotate(-.5deg)}86%{transform:translate(2.5px, -1.5px) rotate(.5deg)}88%{transform:translate(1.5px, -.5px) rotate(.5deg)}90%{transform:translate(2.5px, 1.5px) rotate(.5deg)}92%{transform:translate(-.5px, -1.5px) rotate(-.5deg)}94%{transform:translate(-1.5px, 1.5px) rotate(.5deg)}96%{transform:translate(2.5px, 2.5px) rotate(1.5deg)}98%{transform:translate(1.5px, -1.5px) rotate(-.5deg)}0%,100%{transform:translate(0, 0) rotate(0)}}
+ */
+/* .shake{display:inline-block;transform-origin:center center}.shake-freeze,.shake-constant{-webkit-animation-play-state:paused}.shake-freeze, .shake-freeze,.shake-trigger .shake{animation-play-state:running}@-webkit-keyframes shake{2%{transform:translate(-1.5px, .5px) rotate(.5deg)}4%{transform:translate(.5px, -1.5px) rotate(.5deg)}6%{transform:translate(-.5px, .5px) rotate(1.5deg)}8%{transform:translate(-.5px, -1.5px) rotate(1.5deg)}10%{transform:translate(-.5px, 1.5px) rotate(.5deg)}12%{transform:translate(2.5px, -1.5px) rotate(-.5deg)}14%{transform:translate(1.5px, .5px) rotate(-.5deg)}16%{transform:translate(1.5px, -1.5px) rotate(.5deg)}18%{transform:translate(2.5px, -.5px) rotate(.5deg)}20%{transform:translate(-.5px, 1.5px) rotate(.5deg)}22%{transform:translate(-.5px, -.5px) rotate(.5deg)}24%{transform:translate(2.5px, -1.5px) rotate(1.5deg)}26%{transform:translate(-.5px, 2.5px) rotate(-.5deg)}28%{transform:translate(2.5px, -1.5px) rotate(.5deg)}30%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}32%{transform:translate(.5px, 1.5px) rotate(-.5deg)}34%{transform:translate(2.5px, .5px) rotate(.5deg)}36%{transform:translate(1.5px, -1.5px) rotate(.5deg)}38%{transform:translate(2.5px, 2.5px) rotate(.5deg)}40%{transform:translate(-.5px, -.5px) rotate(.5deg)}42%{transform:translate(2.5px, -1.5px) rotate(.5deg)}44%{transform:translate(1.5px, -.5px) rotate(1.5deg)}46%{transform:translate(.5px, 2.5px) rotate(.5deg)}48%{transform:translate(.5px, 1.5px) rotate(-.5deg)}50%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}52%{transform:translate(.5px, 1.5px) rotate(-.5deg)}54%{transform:translate(-.5px, .5px) rotate(-.5deg)}56%{transform:translate(1.5px, -.5px) rotate(.5deg)}58%{transform:translate(.5px, 2.5px) rotate(1.5deg)}60%{transform:translate(-.5px, 1.5px) rotate(-.5deg)}62%{transform:translate(2.5px, .5px) rotate(1.5deg)}64%{transform:translate(-.5px, 2.5px) rotate(.5deg)}66%{transform:translate(.5px, -.5px) rotate(-.5deg)}68%{transform:translate(.5px, -.5px) rotate(-.5deg)}70%{transform:translate(-1.5px, 2.5px) rotate(1.5deg)}72%{transform:translate(-.5px, 1.5px) rotate(1.5deg)}74%{transform:translate(-.5px, 2.5px) rotate(1.5deg)}76%{transform:translate(2.5px, .5px) rotate(-.5deg)}78%{transform:translate(2.5px, 1.5px) rotate(1.5deg)}80%{transform:translate(-1.5px, -.5px) rotate(-.5deg)}82%{transform:translate(2.5px, -1.5px) rotate(1.5deg)}84%{transform:translate(-1.5px, .5px) rotate(-.5deg)}86%{transform:translate(2.5px, -1.5px) rotate(.5deg)}88%{transform:translate(1.5px, -.5px) rotate(.5deg)}90%{transform:translate(2.5px, 1.5px) rotate(.5deg)}92%{transform:translate(-.5px, -1.5px) rotate(-.5deg)}94%{transform:translate(-1.5px, 1.5px) rotate(.5deg)}96%{transform:translate(2.5px, 2.5px) rotate(1.5deg)}98%{transform:translate(1.5px, -1.5px) rotate(-.5deg)}0%,100%{transform:translate(0, 0) rotate(0)}}.shake,.shake-trigger .shake,.shake.shake-freeze,.shake.shake-constant{-webkit-animation-name:shake;-webkit-animation-duration:100ms;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite} */
