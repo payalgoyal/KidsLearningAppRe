@@ -16,6 +16,13 @@ function activityMatch(cat){
 		foot.removeChild(foot.firstChild);
 	}
 	
+	if (cat==7){
+		var queryString = new Array();
+		var query = window.location.search.split('?')[1];
+		var cat = query.split('=')[1];
+		matchTheColumn(cat);
+	}
+	
 	if (cat == 8){
 		queryImages.push("images/RedStar.png","images/BlueStar.png");
 		

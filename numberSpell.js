@@ -2,6 +2,7 @@ var list = [];
 var optionKeys;
 var blankCount;
 function numberSpell(){
+	document.getElementById("wrapper").setAttribute("style","background-image: url('images/numbers.png');background-size:cover");
 	list.push({key: 1,
 		optionValue: "ONE"});
 		

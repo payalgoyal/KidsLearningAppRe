@@ -3,6 +3,7 @@
 <head>
 	<title>My Learning App</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="script1.js"></script>
 	<script src="activityMatch.js"></script>
 	<script src="jquery-1.11.2.min.js"></script>
 	<!-- <script type="text/javascript" src="phonegap.js"></script> -->
@@ -24,12 +25,19 @@
 		</div>
 	
 	</div>
-
+	
 	<script>
 		var queryString = new Array();
 		var query = window.location.search.split('?')[1];
 		var cat = query.split('=')[1];
-		activityMatch(cat);
+		matchTheColumn(cat);
 	</script>
+
+	<!-- <script>
+		var queryString = new Array();
+		var query = window.location.search.split('?')[1];
+		var cat = query.split('=')[1];
+		activityMatch(cat);
+	</script> -->
 </body>
 </html>

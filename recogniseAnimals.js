@@ -3,6 +3,7 @@ var animalSrc = [];
 var optionKeys;
 var blankCount;
 function recogniseAnimals(){
+	document.getElementById("wrapper").setAttribute("style","background-image: url('images/animalsBg.png');background-size:cover");
 	animalSrc.push("images/cat.jpg",
 			"images/dog.jpg",
 			"images/elephant.jpg")

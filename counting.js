@@ -3,6 +3,7 @@ var queryLetter;
 	var list = [];
 
 function counting(){
+	document.getElementById("wrapper").setAttribute("style","background-image: url('images/numbers.png');background-size:cover");
 	list.push({key: 2,
 		optionValue: [3,1,2,5,4]});
 	list.push({key: 4,
@@ -28,7 +29,7 @@ function counting(){
 	playArea.appendChild(queryDiv);
 	for (var i=0;i<list[ran].key;i++){
 		var query = document.createElement("img");
-		query.setAttribute("src","images/apple.jpg");
+		query.setAttribute("src","images/apple.png");
 		query.setAttribute("style","width:100px;height:60px");
 		
 		queryArea = document.getElementById("queryDiv");

@@ -2,6 +2,7 @@ var list = [];
 var optionKeys;
 var blankCount;
 function guessIt(){
+	document.getElementById("wrapper").setAttribute("style","background-image: url('images/alphabetsBg.png');background-size:cover");
 	list.push({key: "Used to hear",
 		optionValue: "EARS"});
 		
