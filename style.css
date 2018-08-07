@@ -47,7 +47,7 @@ img, embed, object, video {
 #header {
 	display: block;
 	width: 100%;
-	background-image: url(images/header_bg_repeat.png);
+	/* background-image: url(images/header_bg_repeat.png); */
 	background-size: contain;
 	font-size: 1.8em;
 	vertical-align: middle;

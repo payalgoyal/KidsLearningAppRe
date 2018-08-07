@@ -12,7 +12,7 @@ function guessIt(){
 	list.push({key: "Used to speak",
 		optionValue: "MOUTH"});
 	
-	document.getElementById("header").innerHTML = "Guess It";
+	document.getElementById("header").innerHTML = "<img src='images/guessItHeader.png' style='margin-top:-5%'>";
 	
 	ran = Math.floor(Math.random() * list.length);
 	

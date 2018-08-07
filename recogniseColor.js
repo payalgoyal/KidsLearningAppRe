@@ -18,7 +18,7 @@ function colorRecognise(){
 	for (var inc = 0;inc<list[ran].optionValue.length;inc++){
 		optionKeys.push(list[ran].optionValue[inc]);
 	}
-	document.getElementById("header").innerHTML = "Identify Color";
+	document.getElementById("header").innerHTML = "<img src='images/identifyColorHeader.png' style='margin-top:-5%'>";
 	queryLetter = list[ran].key;
 	
 	queryArea.setAttribute("style","margin-left:auto;margin-right:auto;width:50%;height:50%;background-color:"+queryLetter);

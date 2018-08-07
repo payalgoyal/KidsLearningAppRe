@@ -16,7 +16,7 @@ function recogniseAnimals(){
 	list.push({key: 0,
 		optionValue: "CAT"});
 	
-	document.getElementById("header").innerHTML = "ANIMALS";
+	document.getElementById("header").innerHTML = "<img src='images/identifyAnimalHeader.png' style='margin-top:-5%'>";
 	if (document.getElementById("play_area").children.length > 0){
 		document.getElementById("play_area").removeChild(document.getElementById("play_area").children[0]);
 	}

@@ -4,6 +4,8 @@ var queryLetter;
 
 function counting(){
 	document.getElementById("wrapper").setAttribute("style","background-image: url('images/numbers.png');background-size:cover");
+	
+	document.getElementById("header").innerHTML = "<img src='images/countingHeader.png' style='margin-top:-5%'>";
 	list.push({key: 2,
 		optionValue: [3,1,2,5,4]});
 	list.push({key: 4,
