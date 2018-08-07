@@ -10,13 +10,15 @@ function registerEnteredKey(key){
 			var bSpan = document.getElementById("blank"+l);
 			bSpan.innerHTML = key.innerHTML+" ";
 			blankCount--;
+			playAudio("correctLetter");
 		}
-	if (blankCount == 0){
+	if (blankCount <= 0){
 		var keysEle = document.getElementsByClassName("keys");
 		for(var keyEle=0;keyEle<keysEle.length;keyEle++){
 			keysEle[keyEle].disabled = true;
+			playAudio("correctAnswerComplete");
 		}
-		playAudio("correctLetter");
+		
 		
 		var collectedChoco = document.getElementById('collectedChocolates');
 		document.getElementById('collectedChocolates').innerHTML = parseInt(collectedChoco.innerHTML) + 1;
@@ -44,7 +46,6 @@ function registerEnteredKey(key){
 
 function registerKey(keyEntered){
 	keyEntered.setAttribute("style","transition-timing-function:ease-in;transition:0.1s;transform:translateX(0%) translateY(-25%);");
-	// playAudio("keyPressAudio");
 	setTimeout(function(){
 		keyEntered.setAttribute("style","font-size: 2.5em;");
 		enteredKey = keyEntered.innerHTML;
@@ -67,7 +68,7 @@ var compareAns=function(queryLetter,enteredKey) {
 		
 		var collectedChoco = document.getElementById('collectedChocolates');
 		document.getElementById('collectedChocolates').innerHTML = parseInt(collectedChoco.innerHTML) + 1;
-		
+		playAudio("correctAnswerComplete");
 		var corr = document.createElement("img");
 		corr.setAttribute("src","images/correct.png");
 		corr.setAttribute("id","correctState");
@@ -85,7 +86,7 @@ var compareAns=function(queryLetter,enteredKey) {
 		
 	}
 	else{
-		playAudio("wrongLetter");
+		playAudio("wrongAnswerComplete");
 		var corr = document.createElement("img");
 		corr.setAttribute("src","images/incorrect.png");
 		corr.setAttribute("id","correctState");
