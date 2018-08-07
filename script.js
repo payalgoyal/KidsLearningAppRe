@@ -145,6 +145,7 @@ var playAudio = function(audioID) {
 			 function (err) { my_media.release(); }
 	);
 		   // Play audio
+	my_media.setVolume(1.0);
 	my_media.play();
 }
 
