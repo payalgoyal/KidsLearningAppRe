@@ -3,6 +3,7 @@ var queryLetter;
 	var list = [];
 
 function colorRecognise(){
+	document.getElementById("wrapper").setAttribute("style","background-image: url('images/colorBg.png');background-size:cover");
 	var queryArea = document.getElementById("play_area");
 	list.push({key: "RED",
 		optionValue: ["Red","Blue","Green"]});

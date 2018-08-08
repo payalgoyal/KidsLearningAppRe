@@ -311,9 +311,8 @@ img, embed, object, video {
 .catButtons{
 	border: none;
 	background: none;
-	margin-left: 25%;
-	margin-right: 25%;
-	width: 50%;
+	
+	width: 100%;
 	height: 50%;
 }
 .catText{
